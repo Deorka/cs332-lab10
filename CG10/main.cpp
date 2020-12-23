@@ -87,7 +87,7 @@ void renderRectangle()
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
-    glRotatef(rotate_z, 0.0, 0.0, 1.0);
+    glRotatef(rotate_y, 0.0, 1.0, 0.0);
 
     glBegin(GL_QUADS);
     glColor3f(1.0, 0.0, 0.0); glVertex2f(-0.5f, -0.5f);
@@ -106,7 +106,7 @@ int main2(int argc, char* argv[])
     glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowPosition(100, 100);
     glutInitWindowSize(600, 600);
-    glutCreateWindow("OpenGL_HelloWorld");
+    glutCreateWindow("2d квадрат");
 
     glutDisplayFunc(renderRectangle);
     glutSpecialFunc(specialKeys);
@@ -425,7 +425,7 @@ int main9(int argc, char* argv[])
 
 int main(int argc, char* argv[]) {
     //Голубой экран
-    main1(argc, argv);
+    //main1(argc, argv);
     //вращение в 2D  квадрата вокруг центра экрана. квадрат с градиентной закраской
     //main2(argc, argv);
     //вращение в 3D куба (каркасный) в ортографической проекци
@@ -441,6 +441,6 @@ int main(int argc, char* argv[]) {
     //два  треугольника разного цвета
     //main8(argc, argv);
     //вращение в 3D треугольника (с градиентной закраской) вокруг осей координат
-    //main9(argc, argv);
+    main9(argc, argv);
 	return 0;
 }
